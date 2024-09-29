@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>POP OFF WITH POP UPS</title>
+
+  <!-- Import fonts -->
+  <!-- Start font for example -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400..700&display=swap" rel="stylesheet">
+  <!-- End font for example -->
+
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/popup.css">
+  <link rel="stylesheet" href="./styles/example.css">
+  <link rel="stylesheet" href="./styles/yourturn.css">
+
+  <script src="./scripts/index.js"></script>
+  <script src="scripts/popup.js" defer></script>
+
+</head>
+
+<body>
+
+  <h1 class="cool-heading">POP OFF WITH POPUPS</h1>
+  <div class="grid-container">
+    <button id="popup-button1" onclick="openPopup(1)">Popup 1</button>
+    <button id="popup-button2" onclick="openPopup(2)">Popup 2</button>
+    <button id="popup-button3" onclick="openPopup(3)">Popup 3</button>
+    <button id="popup-button4" onclick="openPopup(4)">Popup 4</button>
+    <button id="popup-button5" onclick="openPopup(5)">Popup 5</button>
+    <button id="popup-button6" onclick="openPopup(6)">Popup 6</button>
+  </div>
+
+  <!-- We use the character "times something to represent the x" -->
+
+  <div id="popup1" class="popup">
+    <div id="popup-content1" class="popup-content rgb-border">
+      <span id="close1" class="close" onclick="closePopup(1)">&times;</span>
+      <p>This is Popup 1</p>
+    </div>
+  </div>
+
+  <div id="popup2" class="popup">
+    <div id="popup-content2" class="popup-content">
+      <span id="close2" class="close" onclick="closePopup(2)">&times;</span>
+      <p>This is Popup 2</p>
+    </div>
+  </div>
+
+  <div id="popup3" class="popup">
+    <div id="popup-content3" class="popup-content">
+      <span id="close3" class="close" onclick="closePopup(3)">&times;</span>
+      <p>This is Popup 3</p>
+    </div>
+  </div>
+
+  <div id="popup4" class="popup">
+    <div id="popup-content4" class="popup-content">
+      <span id="close4" class="close" onclick="closePopup(4)">&times;</span>
+      <p>This is Popup 4</p>
+    </div>
+  </div>
+
+  <div id="popup5" class="popup">
+    <div id="popup-content5" class="popup-content">
+      <span id="close5" class="close" onclick="closePopup(5)">&times;</span>
+      <p>This is Popup 5</p>
+    </div>
+  </div>
+
+  <div id="popup6" class="popup">
+    <div id="popup-content6" class="popup-content">
+      <span id="close6" class="close" onclick="closePopup(6)">&times;</span>
+      <p>This is Popup 6</p>
+    </div>
+  </div>
+
+</html>

@@ -1,0 +1,76 @@
+:root {
+  /* The lower the number, the faster the shift */
+  --rgb-speed: 3.5s;
+  --rgb-border-radius: 10px;
+  --rgb-border-size: 25px;
+  --rgb-blur-size: 15px;
+
+}
+
+/* START OF RGB BORDERD CLASS */
+/* Linear time function recommended for smooth transition */
+@keyframes rgbBorderAnimation {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 200%;
+  }
+}
+
+.rgb-border {
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: var(--rgb-border-radius);
+}
+
+.rgb-border::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  /* Centering a div :)) */
+  top: calc(var(--rgb-border-size) / 2 * -1);
+  left: calc(var(--rgb-border-size) / 2 * -1);
+  width: calc(100% + var(--rgb-border-size));
+  height: calc(100% + var(--rgb-border-size));
+  /* Create soft gradient colors */
+  background: linear-gradient(to right, #ff6666, #ff9966, #ffff66, #99ff66, #66ffcc, #6699ff, #cc66ff, #ff6666);
+  border-radius: 15px;
+  background-size: 200% 100%;
+  animation: rgbBorderAnimation var(--rgb-speed) infinite linear;
+  filter: blur(var(--rgb-blur-size));
+  /* A little bit of compatibility trust issues */
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+}
+
+/* END OF RGB BORDER CLASS */
+
+/* START OF BUTTON CLASS */
+
+#popup-button1 {
+  /* Add custom google font imported in the html file */
+  font-family: 'Edu QLD Beginner', sans-serif;
+  font-size: 1.5rem;
+  /* Change the pointer when the user hovers it */
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff9966;
+  color: white;
+  position: relative;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#popup-button1:hover {
+  background-color: #667dff;
+  transform: scale(1.1);
+}
+
+/* #popup-content1 {
+  position: relative;
+  border: 5px solid transparent;
+  border-radius: var(--border-radius);
+} */
