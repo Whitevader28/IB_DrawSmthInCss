@@ -96,14 +96,13 @@
 
 .typewriter-effect-container {
   display: inline-block;
-  margin: auto;
-  text-align: center;
+  padding: 10px;
 }
 
 
 .typewriter-effect-text {
   text-align: center;
-  font-size: 5em;
+  font-size: 4em;
   letter-spacing: 10px;
   font-family: monospace;
   /* The border will be the cursor */
@@ -114,11 +113,26 @@
   overflow: hidden;
   /* The number of steps should be the number of characters */
   animation:
-    typewriterEffect 2s steps(15),
+    typewriterEffect 2s steps(29),
     cursorEffect .4s step-end infinite alternate;
 }
 
 /* END OF TYPEWRITER ANIMATION */
+
+/* START OF POPUP CONTENT */
+
+.highlight {
+  background-image: linear-gradient(-100deg, rgba(255, 255, 255, 0), yellow 95%, rgba(255, 255, 255, 0));
+}
+
+#popup1-body {
+  font-family: monospace;
+  font-size: 1.5em;
+  padding: 30px;
+  text-indent: 1em;
+}
+
+/* END OF POPUP CONTENT */
 
 /* #popup-content1 {
   text-align: center;
