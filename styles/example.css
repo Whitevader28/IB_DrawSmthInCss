@@ -1,5 +1,5 @@
 :root {
-  /* The lower the number, the faster the shift */
+  /* The lower the number, the faster color the shift */
   --rgb-speed: 3.5s;
   --rgb-border-radius: 10px;
   --rgb-border-size: 25px;
@@ -69,8 +69,57 @@
   transform: scale(1.1);
 }
 
+/* END OF BUTTON CLASS */
+
+/* START OF TYPEWRITER ANIMATION */
+
+/* Because of the white-space: nowrap this may look ugly on phones */
+/* Smaller font size should be use on smaller screens because of that */
+
+@keyframes typewriterEffect {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes cursorEffect {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#popup1-title {
+  text-align: center;
+  padding: auto;
+  margin: 0;
+}
+
+.typewriter-effect-container {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+
+
+.typewriter-effect-text {
+  text-align: center;
+  font-size: 5em;
+  letter-spacing: 10px;
+  font-family: monospace;
+  /* The border will be the cursor */
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  /* To hide the text before the cursor */
+  overflow: hidden;
+  /* The number of steps should be the number of characters */
+  animation:
+    typewriterEffect 2s steps(15),
+    cursorEffect .4s step-end infinite alternate;
+}
+
+/* END OF TYPEWRITER ANIMATION */
+
 /* #popup-content1 {
-  position: relative;
-  border: 5px solid transparent;
-  border-radius: var(--border-radius);
+  text-align: center;
 } */
